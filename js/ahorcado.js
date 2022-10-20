@@ -1,5 +1,5 @@
 //SELECTORES
-let palabras = ["ALURA", "ORACLE", "JAVASCRIPT", "HTML", "CSS"];
+let palabras = ["ALURA", "ORACLE", "ONE","JAVASCRIPT", "HTML", "CSS"];
 let tablero = document.getElementById("forca").getContext("2d");
 let palabraSecreta = "";
 
