@@ -8,6 +8,10 @@ body {
     background: #F3F5FC;
 }
 
+#forca {
+    background-color: aquamarine;
+}
+
 .btn-iniciar {
     display: flex;
     flex-direction: row;
