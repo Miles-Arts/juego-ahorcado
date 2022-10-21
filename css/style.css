@@ -8,9 +8,9 @@ body {
     background: #F3F5FC;
 }
 
-#forca {
-    background-color: aquamarine;
-}
+/*#forca {
+    background-color: rgb(242, 201, 201);
+}*/
 
 .btn-iniciar {
     display: flex;

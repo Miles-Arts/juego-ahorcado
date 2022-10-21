@@ -36,19 +36,19 @@ function escribirLetraCorrecta(index) {
     tablero.LineWidth = 6;
     tablero.LineCap = "round";
     tablero.LineJoin = "round";
-    tablero.fillStyle = "#F3F5F6";
+    tablero.fillStyle = "#0A3871";
 
     let anchura = 600 / palabraSecreta.length;
     tablero.fillText(palabraSecreta[index], 505 + (anchura * index), 620);
-    tablero.stroke()
+    tablero.stroke();
 }
 
-function escribirLetrasIncorrectas(letra, errorsLeft) {
-    tablero.font = "bold 40px Inter";
+function escribirLetraIncorrecta(letra, errorsLeft) {
     tablero.LineWidth = 6;
+    tablero.font = "bold 40px Inter";
     tablero.LineCap = "round";
     tablero.LineJoin = "round";
-    tablero.fillStyle = "#F3F5F6";
-    tablero.fillText(letra, 535 + (40 * (10 - errorsLeft)), 710, 40);
+    tablero.fillStyle = "#0A3871";
+    tablero.fillText(letra, 505 + (40 * (10 - errorsLeft)), 710, 40);
 
 }
