@@ -32,14 +32,23 @@ function dibujarLinea() {
 }
 
 function escribirLetraCorrecta(index) {
-    tablero.font = "bold 63px Inter";
+    tablero.font = "bold 52px Inter";
     tablero.LineWidth = 6;
     tablero.LineCap = "round";
     tablero.LineJoin = "round";
     tablero.fillStyle = "#F3F5F6";
 
-    let anchura = 600/palabraSecreta.length;
-    tablero.fillText(palabraSecreta[index], 505+(anchura*index),620);
+    let anchura = 600 / palabraSecreta.length;
+    tablero.fillText(palabraSecreta[index], 505 + (anchura * index), 620);
     tablero.stroke()
+}
+
+function escribirLetrasIncorrectas(letra, errorsLeft) {
+    tablero.font = "bold 40px Inter";
+    tablero.LineWidth = 6;
+    tablero.LineCap = "round";
+    tablero.LineJoin = "round";
+    tablero.fillStyle = "#F3F5F6";
+    tablero.fillText(letra, 535 + (40 * (10 - errorsLeft)), 710, 40);
 
 }

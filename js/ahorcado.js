@@ -3,7 +3,7 @@ let palabras = ["ALURA", "ORACLE", "ONE", "JAVASCRIPT", "HTML", "CSS"];
 let tablero = document.getElementById("forca").getContext("2d");
 let palabraSecreta = "";
 let letras = [];
-
+let errores = 8;
 
 //PALABRA SECRETA
 
@@ -27,6 +27,12 @@ function comprobarLetras(key) {
     }
 }
 
+function anadirLetraIncorrecta() {
+    errores -= 1;
+    //errores = errores - 1;
+    console.log(errores);
+}
+
 
 // INICIAR JUEGO
 
@@ -39,6 +45,17 @@ function iniciarJuego() {
 
     document.onkeydown = (e) => {
         let letra = e.key.toUpperCase();
-        comprobarLetras(letra);
+        //comprobarLetras(letra);
+
+        if (comprobarLetras(letra) && palabraSecreta.includes(letra)) {
+            for (let i = 0; i < palabraSecreta.length; i++) {
+                if (palabraSecreta[i] === letra) {
+                    escribirLetraCorrecta(i);
+                }
+            }
+        } else {
+            anadirLetraIncorrecta(letra);
+            escribirLetrasIncorrectas(letra, errores);
+        }
     }
 }
